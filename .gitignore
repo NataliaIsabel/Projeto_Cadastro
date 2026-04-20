@@ -1,0 +1,35 @@
+# Compilados
+target/
+build/
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# SO
+.DS_Store
+Thumbs.db
+
+# Java
+*.class
+
+# Servidor
+tomcat/
+work/
+temp/
+
+# Arquivos sensíveis
+.env
