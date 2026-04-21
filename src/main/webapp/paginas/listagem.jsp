@@ -33,33 +33,24 @@
 		</tr>
 		<% 
 			int somaQtd = 0;
-			int i=1;
 			for (Produto p : produtos) { 
 				somaQtd += p.getQuantidade();
 		%>
 	
 			<tr>
-				<td><%= i %></td>
+				<td><%= p.getId() %></td>
 				<td><%= p.getNome() %></td>
 				<td><%= p.getCategoria() %></td>
 				<td><%= p.getPreco() %></td>
 				<td><%= p.getQuantidade() %></td>
-				<td><a href="#">Editar</a></td>
-				<td><a href="./RemoveProduto?id=<%= i %>">Remover</a></td>
+				<td><a href="<%= application.getContextPath() %>/EditarProduto?id=<%= p.getId() %>">Editar</a></td>
+				<td><a href="<%= application.getContextPath() %>/RemoveProduto?id=<%= p.getId() %>">Remover</a></td>
 			</tr>
-		<% i++; } %>
+		<% } %>
 	</table>
 	<p>Total de Produtos: <%= somaQtd %></p>
 	<% } %>  
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 </body>
 </html>

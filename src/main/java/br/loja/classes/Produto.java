@@ -1,13 +1,22 @@
 package br.loja.classes;
 
 public class Produto {
+	
+	private static int contadorId = 1;
 
+	private int id;
 	private String nome;
 	private int categoria;
 	private float preco;
 	private int quantidade;
 	
-	public Produto () {}
+	public Produto () {
+		this.id = contadorId++;
+	}
+	
+	public int getId() {
+		return id;
+	}
 
 	public String getNome() {
 		return nome;

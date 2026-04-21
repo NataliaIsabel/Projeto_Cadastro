@@ -39,7 +39,22 @@ public class RemoveProduto extends HttpServlet {
 		List<Produto> banco = (List<Produto>) getServletContext()
 							.getAttribute("banco");
 		
-		banco.remove(id-1);
+		// mudança para remover o objeto de acordo com o id
+		Produto remover = null;
+
+		// faz a busca pelo produto igual ao id selecionado e atribui o objeto a variavel remover
+		for (Produto p : banco) {
+		    if (p.getId() == id) {
+		        remover = p;
+		        break;
+		    }
+		}
+
+		if (remover != null) {
+		    banco.remove(remover);
+		}
+		
+		//banco.remove(id-1);
 		
 		getServletContext().setAttribute("banco", banco);
 			

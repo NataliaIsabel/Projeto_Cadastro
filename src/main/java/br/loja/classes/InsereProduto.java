@@ -73,19 +73,6 @@ public class InsereProduto extends HttpServlet {
 				.getRequestDispatcher("paginas/listagem.jsp");
 		rd.forward(request, response);
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 
 }
